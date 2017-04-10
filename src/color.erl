@@ -11,7 +11,7 @@ new(R,G,B,A) when ?is_channel(R), ?is_channel(G),
 blend(Src,Dst) ->
 	blend(Src,Dst,alpha(Src,Dst)).
 
-blend(Src,Dest,Alpha) when Alpha > 0.0 ->
+blend(Src,Dst,Alpha) when Alpha > 0.0 ->
 	Dst#{
 	  red := red(Src,Dst) / Alpha,
 	  green := green(Src,Dst) / Alpha,
